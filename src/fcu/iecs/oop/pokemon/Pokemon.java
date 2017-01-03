@@ -1,5 +1,29 @@
 package fcu.iecs.oop.pokemon;
 
-public class Pokemon {
-
+public abstract class Pokemon {
+	private final String name;
+	private final PokemonType type;
+	private int cp;
+	
+	public Pokemon(String name,PokemonType type,int cp){
+		this.name=name;
+		this.type=type;
+		this.cp=cp;
+	}
+	public abstract void attack();
+	
+	public String getName() {
+		return name;
+	}
+	public PokemonType getType() {
+		return type;
+	}
+	public int getCp() {
+		return cp;
+	}
+	public void setCp(int cp) {
+		this.cp = cp;
+	}
+	
+	
 }
